@@ -27,14 +27,14 @@ async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
     // TODO STEP 2
 
     const txData: FrameTransactionResponse = {
-        chainId: `eip155:${base.id}`,
+        chainId: `eip155:${baseSepolia.id}`,
         method: 'eth_sendTransaction',
         params: {
           abi: [],
           data,
           to: CLICK_THE_BUTTON_CONTRACT_ADDR,
 //          value: parseGwei('10000').toString(), // 0.00001 ETH
-          value: parseGwei('1').toString(), // 0.00000001 ETH
+          value: parseGwei('10000').toString(), // 0.00001 ETH
         },
       };
 
